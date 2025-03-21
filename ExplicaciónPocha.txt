@@ -1,0 +1,29 @@
+Problemas de precision al multiplicar probabilidades cambiarlo por la suma de los logaritmos de estas probabilidades
+Para obtener luego las probabilidades elevar el logaritmo
+
+Al contar las apariencias de la bbdd no hace falta sumarle 1, pues al hacer unique no apareceria en caso de no estar,
+SIn embargo, al contar de la BBDD ocurrencias de la variable objetivo conociendo otra variable (contar casos <=50 con X1=A), si hay que sumar 1, pues puede ser 0 y dar problemas en la division.
+
+FORMULA NORMAL. NOSE DONDE O PARA QUÉ SE USA PERO SE USA. Puede que ya este implementado en numpy
+Bueno ya se
+para la campana de gauss variables numéricas, para calcular su probabilidades
+Necesitamos la media y desviación típica
+
+PARA COMPARAR se puede usar ese numero directamente
+PARA OBTENER LA PROBABILIDAD es necesario normalizar lo que salga.
+
+a = 0.034
+b = 0.4 * 0.43 * 0.6 = 0.1032
+Para la probabilidad:
+0.1032 / (0.034+0.1032)
+
+CON LOGARITMOS:
+auxa = -0.66
+auxb = ln0.4 + ln0.43 + ln0.6 = n = -0.395
+a=e^auxa
+b=e^auxb
+Probabilidad:
+
+e^(-0.395) / ((e^-0.395) + (e^-0.66))
+
+n -> Numero sin normalizar, nos sirve para comparar varios entre sí, pero no para decir su probabilidad
